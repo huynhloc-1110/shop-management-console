@@ -151,6 +151,7 @@ namespace ShopManagement
                 Item item = new Item(product, quantity);
 
                 storehouse.PutIn(item);
+                WriteLine(ConsoleColor.Green, "Item imported successfully.");
             }
             catch (ArgumentException e)
             {
@@ -183,12 +184,15 @@ namespace ShopManagement
             {
                 case "1":
                     AddProduct();
+                    WriteLine(ConsoleColor.Green, "Product added successfully.");
                     break;
                 case "2":
                     EditProduct();
+                    WriteLine(ConsoleColor.Green, "Product edited successfully.");
                     break;
                 case "3":
                     DeleteProduct();
+                    WriteLine(ConsoleColor.Green, "Product deleted successfully.");
                     break;
                 default:
                     WriteLine(ConsoleColor.Red, "Quit managing product. Back to main menu.");
